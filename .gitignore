@@ -1,0 +1,11 @@
+# OSX
+.DS_Store
+
+__pycache__
+
+# vscode
+.vscode
+
+# audio
+*.wav
+*.mp3

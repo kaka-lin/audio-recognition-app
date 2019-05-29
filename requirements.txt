@@ -1,0 +1,4 @@
+SpeechRecognition==3.8.1
+pygame==1.9.6
+pydub==0.23.1
+argparse==1.4.0
