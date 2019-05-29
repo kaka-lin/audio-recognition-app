@@ -74,6 +74,7 @@ if __name__ == "__main__":
 
     parser.add_argument("-f", "--file", dest="filename", help="name of audio file.")
     parser.add_argument("-c", "--convert", action="store_true", help="Converting mp3 to wav.")
+    parser.add_argument("-t", "--time", dest="time", help="split the origin file with n seconds.")
 
     args = parser.parse_args()
 
@@ -99,11 +100,14 @@ if __name__ == "__main__":
         sys.exit()
 
     wav_info, data = parse_wav(filename)
-    nfiles = split_wav(wav_info, data, 10)
+
+    if (args.time):
+        nfiles = split_wav(wav_info, data, args.time)
+    else:
+        nfiles = split_wav(wav_info, data)
 
     print("Audio recognition ... \n")
-    for i in range(12):
+    for i in range(nfiles):
         audio_recognition("audio/split/" + "split{}.wav".format(i),
             language="en-AU")
-
 
