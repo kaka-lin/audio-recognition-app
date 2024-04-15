@@ -7,5 +7,7 @@ __pycache__
 .vscode
 
 # audio
+audio/
 *.wav
 *.mp3
+!test.mp3
