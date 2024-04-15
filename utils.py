@@ -1,6 +1,7 @@
 import pygame
 from pydub import AudioSegment
 
+
 def play_mp3(fd):
     pygame.init()
     #pygame.mixer.music.set_volume(0.5)
@@ -10,6 +11,7 @@ def play_mp3(fd):
 
     while pygame.mixer.music.get_busy():
         pygame.time.Clock().tick(10)
+
 
 # need ffmpeg
 def convert_mp3_to_wav(src, dst):

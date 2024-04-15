@@ -6,6 +6,7 @@ from argparse import ArgumentParser
 
 from utils import *
 
+
 def parse_wav(filename):
     print("Parsing {} file ...".format(filename))
 
@@ -17,6 +18,7 @@ def parse_wav(filename):
         str_data = wav.readframes(frames)
 
     return (channel, rate, resolution, frames), str_data
+
 
 def split_wav(info, data, time=10):
     channel, rate, resolution, frames = info
@@ -56,6 +58,7 @@ def split_wav(info, data, time=10):
 
     return split_file_nums
 
+
 def audio_recognition(filename, language="en-US"):
     r = sr.Recognizer()
     with sr.AudioFile(filename) as source:
@@ -68,6 +71,7 @@ def audio_recognition(filename, language="en-US"):
         print("Google Speech Recognition could not understand audio")
     except sr.RequestError as e:
         print("Could not request results from Google Speech Recognition service; {0}".format(e))
+
 
 if __name__ == "__main__":
     parser = ArgumentParser()
@@ -110,4 +114,3 @@ if __name__ == "__main__":
     for i in range(nfiles):
         audio_recognition("audio/split/" + "split{}.wav".format(i),
             language="en-AU")
-
