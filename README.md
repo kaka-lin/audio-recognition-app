@@ -32,11 +32,16 @@ Generating text of the audio file.
 
 ## Usage
 
-```bash
-$ python audio_recognition.py -f <wav file>
+- #### For WAV File
 
-# or
+    ```bash
+    $ python audio_recognition.py -f <wav file>
+    ```
 
-$ python audio_recognition.py -f <mp3 file> -c
-```
+- #### For MP# File
 
+    We need to convert `mp3` to `wav`, so we need to use `-c` argument.
+
+    ```
+    $ python audio_recognition.py -f <mp3 file> -c
+    ```
