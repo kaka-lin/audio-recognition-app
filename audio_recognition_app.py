@@ -16,8 +16,7 @@ def transcribe_audio(mic=None, file=None):
     return transcription
 
 
-if __name__ == "__main__":
-    app = gr.Interface(
+app = gr.Interface(
         fn=transcribe_audio,
         inputs=[
             gr.Audio(sources="microphone", type="filepath"),
@@ -27,4 +26,5 @@ if __name__ == "__main__":
     )
 
 
+if __name__ == "__main__":
     app.launch()
