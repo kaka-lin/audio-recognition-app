@@ -1,3 +1,7 @@
-SpeechRecognition==3.10.3
-pygame==2.5.2
+gradio==5.30.0
+pygame==2.6.1
 pydub==0.25.1
+torch>=2.1
+tensorflow>=2.6
+transformers==4.51.3
+SpeechRecognition==3.14.3

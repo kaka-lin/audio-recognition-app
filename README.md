@@ -6,11 +6,14 @@ Generating text of the audio file.
 
 ## Requirements
 
-- Python3+
+- Python 3.10 or higher
+- Gradio requires Python 3.10 or higher.
 - pygame
 - pydub
+- [ffmpeg](https://ffmpeg.org/): for convert mp3 to wav
+- [PyTorch](https://pytorch.org/get-started/locally/) 2.1+, [TensorFlow](https://www.tensorflow.org/install/pip?hl=zh-tw) 2.6+
+- [transformers](https://github.com/huggingface/transformers?tab=readme-ov-file)
 - [SpeechRecognition](https://github.com/Uberi/speech_recognition)
-- [ffmpeg](https://ffmpeg.org/)
 
 ## Install
 
