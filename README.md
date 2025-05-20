@@ -1,6 +1,6 @@
-# Audio Recognition
+# Multi-ASR Toolkit
 
-Generating text of the audio file.
+Multi-ASR Toolkit is a flexible and extensible speech recognition toolkit supporting multiple backend engines such as Whisper, Faster-Whisper, WhisperX, SpeechRecognition, and Vosk. It provides both a command-line interface and a web-based interface via Gradio, facilitating easy transcription of audio files using various ASR models.
 
 ![](images/demo.png)
 
