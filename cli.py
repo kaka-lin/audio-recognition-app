@@ -1,5 +1,5 @@
 import argparse
-from backends import get_backend
+from utils.model import transcribe_audio
 
 
 def run_cli(args):
@@ -13,22 +13,14 @@ def run_cli(args):
 
     args = parser.parse_args()
 
-    # 設定模型名稱（某些 backend 不需要）
-    if args.backend == "transformers":
-        model_name = f"openai/whisper-{args.model_size}"
-    elif args.backend == "speech-recognition":
-        model_name = None
-    else:
-        model_name = args.model_size
-
-    # 準備 backend
-    kwargs = {"language": args.language}
-    if model_name:
-        kwargs["model_size"] = model_name
-
-    asr = get_backend(args.backend, **kwargs)
-
+    # transcribe audio
     print(f"[INFO] 使用 {args.backend} 後端進行辨識...")
-    text = asr.transcribe(args.audio_path)
+    result = transcribe_audio(
+        mic=None,
+        file=args.audio_path,
+        backend=args.backend,
+        language=args.language,
+        model_size=args.model_size
+    )
     print("\n📝 辨識結果：\n")
-    print(text)
+    print(result)
