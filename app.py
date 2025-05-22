@@ -50,8 +50,8 @@ def build_demo():
         gr.Markdown("## 🧠 Multi-ASR Toolkit - 語音轉文字平台")
 
         with gr.Row():
-            backend_dropdown = gr.Dropdown(choices=backend_choices, label="選擇引擎", value="transformers")
-            language_dropdown = gr.Dropdown(choices=language_choices, label="語言", value="auto")
+            backend_dropdown = gr.Dropdown(choices=backend_choices, label="選擇引擎", value=backend_choices[0])
+            language_dropdown = gr.Dropdown(choices=language_choices, label="語言", value=language_choices[0])
             modelsize_dropdown = gr.Dropdown(
                 choices=model_size_options["transformers"],
                 label="模型大小",

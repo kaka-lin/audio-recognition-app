@@ -1,5 +1,7 @@
 from .transformers_backend import TransformersBackend
 from .speech_recognition_backend import SpeechRecognitionBackend
+from .whisper_backend import WhisperBackend
+from .faster_whisper_backend import FasterWhisperBackend
 
 
 def get_backend(name: str, **kwargs):
@@ -8,5 +10,9 @@ def get_backend(name: str, **kwargs):
         return TransformersBackend(**kwargs)
     elif name == "speech-recognition":
         return SpeechRecognitionBackend(**kwargs)
+    elif name == "whisper":
+        return WhisperBackend(**kwargs)
+    elif name == "faster-whisper":
+        return FasterWhisperBackend(**kwargs)
     else:
         raise ValueError(f"Unknown backend: {name}")

@@ -58,4 +58,3 @@ if __name__ == "__main__":
     filename = "audio/output.wav"
     wav_info, data = parse_wav(filename)
     nfiles = split_wav(wav_info, data)
-
