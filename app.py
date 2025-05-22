@@ -1,4 +1,6 @@
 import argparse
+import platform
+
 import gradio as gr
 
 from cli import run_cli
@@ -13,6 +15,11 @@ model_size_options = {
     "whisper": ["tiny", "base", "small", "medium", "large"],
     "speech-recognition": ["google"],
 }
+
+if platform.system() == "Darwin":
+    # macOS specific settings
+    backend_choices.append("mlx-whisper")
+    model_size_options["mlx-whisper"] = ["tiny", "base", "small", "medium", "large-v1", "large-v2", "large-v3", "large-v3-turbo"]
 
 
 def update_model_size_dropdown(backend):

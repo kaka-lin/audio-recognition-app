@@ -16,6 +16,7 @@ Multi-ASR Toolkit is a flexible and extensible speech recognition toolkit suppor
 - [SpeechRecognition](https://github.com/Uberi/speech_recognition)
 - [Whisper](https://github.com/openai/whisper)
 - [Faster Whisper](https://github.com/SYSTRAN/faster-whisper)
+- [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper)
 
 ## Install
 

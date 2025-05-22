@@ -7,3 +7,6 @@ transformers==4.51.3
 SpeechRecognition==3.14.3
 openai-whisper
 faster-whisper
+
+# 只有在 macOS 上才安裝 mlx-whisper
+mlx-whisper; sys_platform == "darwin"
