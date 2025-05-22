@@ -15,6 +15,5 @@ def play_mp3(fd):
 
 # need ffmpeg
 def convert_mp3_to_wav(src, dst):
-    print("Converting {} to {}".format(src, dst))
     sound = AudioSegment.from_mp3(src)
     sound.export(dst, format="wav")

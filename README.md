@@ -39,24 +39,14 @@ Multi-ASR Toolkit is a flexible and extensible speech recognition toolkit suppor
 
 ### Using through command line interface (CLI)
 
-- #### For WAV File
-
-    ```bash
-    $ python audio_recognition.py -f <wav file>
-    ```
-
-- #### For MP3 File
-
-    We need to convert `mp3` to `wav`, so we need to use `-c` argument.
-
-    ```bash
-    $ python audio_recognition.py -f <mp3 file> -c
-    ```
+```bash
+$ python app.py --mode cli <wav/mp3 file>     
+```
 
 ### Using through web application (made with `Gradio`)
 
 ```bash
-$ python3 audio_recognition_app.py
+$ python3 app.py
 ```
 
 ![](images/result.png)
